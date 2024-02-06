@@ -42,23 +42,60 @@ const SpaceDetail = ()=> {
         {visited ? `Visited ${visitDate}` : `Mark ${space.title} As Visited`} 
       </button>
   
-        <p style={{color: 'white', fontStyle: 'italic', textShadow: '2px 2px 4px rgba(244, 151, 142, 1)' }}>{space.description}</p>
+        <p 
+        style={{
+          color: 'white',
+          fontStyle: 'italic',
+          textShadow: '2px 2px 1px rgba(244, 151, 142, 1)',
+          fontSize: '20px',
+          fontWeight: 'bold'
+        }}>{space.description}</p>
         
         
             <p>
-            <Link style={{color: "#f4978e"}} to={`/categories/${space.category}`}>
+            <Link 
+            style={{
+              color: "#f4978e", 
+              fontWeight: 'bold', 
+              fontSize: '20px', 
+              textShadow: '2px 2px 1px rgba(255, 255, 255, 1)' 
+              }} to={`/categories/${space.category}`}>
               {space.category}
               </Link>
               </p>
         
-        <Link style={{color: "#f4978e"}} to={`/comments/spaces/${space.title}`}>
+        <Link style={{
+              color: "#f4978e", 
+              fontWeight: 'bold', 
+              fontSize: '20px', 
+              textShadow: '2px 2px 1px rgba(255, 255, 255, 1)' 
+              }} to={`/comments/spaces/${space.title}`}>
           <p>Comments</p>
         </Link>
-          <p>Address: <Link style={{color: "#f4978e"}} to={`/map/${title}`}>{space.address}</Link></p>
-          <p>Project Year: {space.est_year}</p>
+          <p style={{color: 'white', fontSize: '20px', textShadow: '2px 2px 1px rgba(244, 151, 142, 1)',
+          fontWeight: 'bold'  }}>Address: <Link style={{
+              color: "#f4978e", 
+              fontWeight: 'bold', 
+              fontSize: '20px', 
+              textShadow: '2px 2px 1px rgba(255, 255, 255, 1)' 
+              }} 
+              to={`/map/${title}`}>{space.address}</Link></p>
+          <p style={{
+          color: 'white',
+          textShadow: '2px 2px 1px rgba(244, 151, 142, 1)',
+          fontSize: '20px',
+          fontWeight: 'bold'
+        }}>Project Year: {space.est_year}</p>
           {avgRating !== null && !isNaN(avgRating)
           ?
-          <p>Average Rating: {parseFloat(avgRating).toFixed(1)}</p>
+          <p 
+          style={{
+            color: 'white',
+            textShadow: '2px 2px 1px rgba(244, 151, 142, 1)',
+            fontSize: '20px',
+            fontWeight: 'bold'
+          }}
+          >Average Rating: {parseFloat(avgRating).toFixed(1)}</p>
           :
           null}
         <Link to={`/ratings/${currentUser.username}/spaces/${space.title}/new`}>

@@ -27,8 +27,8 @@ INSERT INTO categories (cat_type) VALUES
   ('Residence'),
   ('Studio'),
   ('Salon'),
-  ('Bar'),
   ('Closed'),
+  ('Bar'),
   ('Music Venue'),
   ('Winery');
 
@@ -110,7 +110,7 @@ INSERT INTO spaces (title, description, image_url, category_id, address, locatio
 ('Marrow Fine San Diego', 'Modern jewelry store with art deco flare', 'https://www.marrowfine.com/cdn/shop/files/20230302_MARROWFINE_ONEPASEO_7.jpg?crop=center&v=1678919165&width=1500', 3, '3665 Caminito Ct, San Diego, CA, 92130', 27, 2019),
 ('Milo Shoes and Gallery', 'Fun retail store for both shoes and art that has since closed.', 'https://i.pinimg.com/564x/c9/50/1f/c9501fa6fbaf0fe36dd9b0bc2bfd85e7.jpg', 11, '3824 Ray St, San Diego, CA 92104', 38, 2012),
 ('MiresBall Office', 'office space for MiresBall', 'https://i.pinimg.com/564x/4b/15/66/4b1566f88f651cc3e829c6fb3ac6c5d2.jpg', 4, '2605 State St, San Diego, CA, 92103', 36, 2011),
-('n/soto', 'Modern Izakaya by Michelin Star Chef, Niki Nakayama', 'https://cdn.vox-cdn.com/thumbor/da_pGtnupLTPjyJKnruauxxQbmw=/0x0:8203x5469/1720x0/filters:focal(0x0:8203x5469):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23374468/2022_04_04_nsoto_interior_004.jpg', 1 , '4566 W Washington Blvd, Los Angeles, CA, 90016', 12, 2022),
+('n-soto', 'Modern Izakaya by Michelin Star Chef, Niki Nakayama', 'https://cdn.vox-cdn.com/thumbor/da_pGtnupLTPjyJKnruauxxQbmw=/0x0:8203x5469/1720x0/filters:focal(0x0:8203x5469):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23374468/2022_04_04_nsoto_interior_004.jpg', 1 , '4566 W Washington Blvd, Los Angeles, CA, 90016', 12, 2022),
 ('Nima', 'Animaes event space for rent', 'https://cdn.vox-cdn.com/uploads/chorus_image/image/65655486/_DSF4047.0.jpg', 7, '969 Pacific Hwy, San Diego, CA, 92101', 35, 2019),
 ('Parakeet Cafe Beverly Hills', 'San Diego-based eatery specializing in high quality ethically and locally sourced dishes, coffee and baked goods with an elevated interior style.', 'https://s3-media0.fl.yelpcdn.com/bphoto/8l__obCpV5rgjWB1ex2Img/o.jpg', 2 , '206 S Beverly Dr, Beverly Hills, CA 90212', 4, 2023),
 ('Parakeet Cafe Brentwood', 'San Diego-based eatery specializing in high quality ethically and locally sourced dishes, coffee and baked goods with an elevated interior style.', 'https://s3-media0.fl.yelpcdn.com/bphoto/MFE6o78yZ18i55_yQqBzww/o.jpg', 2 , '13050 San Vicente Blvd, Los Angeles, CA 90049', 5, 2024),
