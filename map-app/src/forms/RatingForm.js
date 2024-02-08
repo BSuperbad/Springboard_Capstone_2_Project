@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import UserContext from "../context/UserContext";
-import HappyHourApi from "../api/backendApi";
+import UserContext from "../context/UserContext.js";
+import HappyHourApi from "../api/backendApi.js";
 
 /** Add a new RATING form.
  *

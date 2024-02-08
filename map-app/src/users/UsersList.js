@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import LoadingSpinner from "../common/LoadingSpinner";
-import HappyHourApi from "../api/backendApi";
-import UserCard from "./UserCard";
-import UserContext from "../context/UserContext";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import HappyHourApi from "../api/backendApi.js";
+import UserCard from "./UserCard.js";
+import UserContext from "../context/UserContext.js";
 
 /** Show page with list of users.
  * 

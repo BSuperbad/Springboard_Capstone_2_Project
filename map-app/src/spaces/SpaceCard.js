@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/UserContext";
-import useLikeSpace from "../hooks/useLikeSpace";
-import useMarkSpaceVisited from "../hooks/useMarkSpaceVisited";
+import UserContext from "../context/UserContext.js";
+import useLikeSpace from "../hooks/useLikeSpace.js";
+import useMarkSpaceVisited from "../hooks/useMarkSpaceVisited.js";
 
 /** Show info about space
  * 

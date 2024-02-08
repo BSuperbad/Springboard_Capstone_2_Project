@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import HappyHourApi from "../api/backendApi";
-import CommentCard from "./CommentCard";
-import LoadingSpinner from "../common/LoadingSpinner";
-import UserContext from "../context/UserContext";
+import HappyHourApi from "../api/backendApi.js";
+import CommentCard from "./CommentCard.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import UserContext from "../context/UserContext.js";
 
 /** Show page with list of comments for a space
  * 

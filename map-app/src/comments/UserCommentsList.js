@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import HappyHourApi from "../api/backendApi";
-import CommentCard from "./CommentCard";
-import LoadingSpinner from "../common/LoadingSpinner";
+import HappyHourApi from "../api/backendApi.js";
+import CommentCard from "./CommentCard.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
 
 /** Show page with list of comments by a user
  * 

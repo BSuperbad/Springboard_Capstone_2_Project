@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 
 const useFetchSpace = (title) => {
   const [space, setSpace] = useState(null);

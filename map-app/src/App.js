@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import NavBar from './navigation/NavBar';
-import UserContext from './context/UserContext';
+import NavBar from './navigation/NavBar.js';
+import UserContext from './context/UserContext.js';
 import React, {useState, useEffect} from 'react';
-import HappyHourApi from './api/backendApi';
+import HappyHourApi from './api/backendApi.js';
 import {jwtDecode} from "jwt-decode"
-import MyRoutes from './navigation/MyRoutes';
+import MyRoutes from './navigation/MyRoutes.js';
 
 
 function App() {

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 import { useParams } from "react-router-dom";
-import UserContext from "../context/UserContext";
+import UserContext from "../context/UserContext.js";
 
 /** Show page with average rating of a space */
 

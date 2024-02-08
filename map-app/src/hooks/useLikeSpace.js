@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 
 const useLikeSpace = (currentUser, title) => {
   const [isLiked, setIsLiked] = useState(false);

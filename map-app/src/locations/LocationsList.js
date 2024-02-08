@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import HappyHourApi from "../api/backendApi";
-import LocationCard from "./LocationCard";
-import LoadingSpinner from "../common/LoadingSpinner";
+import HappyHourApi from "../api/backendApi.js";
+import LocationCard from "./LocationCard.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
 import { Link } from "react-router-dom";
-import UserContext from "../context/UserContext";
+import UserContext from "../context/UserContext.js";
 
 /** Show page with list of locations {city, neighborhood} to choose from.
  *

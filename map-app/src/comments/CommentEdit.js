@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import UserContext from "../context/UserContext";
-import HappyHourApi from "../api/backendApi";
+import UserContext from "../context/UserContext.js";
+import HappyHourApi from "../api/backendApi.js";
 
 const CommentEdit = ({update, remove}) => {
   const textColor = { color: "#f4978e", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)" }

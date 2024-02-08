@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import HappyHourApi from "../api/backendApi";
-import CategoryCard from "./CategoryCard";
-import LoadingSpinner from "../common/LoadingSpinner";
-import UserContext from "../context/UserContext";
+import HappyHourApi from "../api/backendApi.js";
+import CategoryCard from "./CategoryCard.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import UserContext from "../context/UserContext.js";
 
 /** Show page with list of categories to choose from.
  *

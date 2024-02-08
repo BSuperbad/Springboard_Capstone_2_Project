@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HappyHourApi from "../api/backendApi";
-import LoadingSpinner from "../common/LoadingSpinner";
-import SpaceCard from "../spaces/SpaceCard";
+import HappyHourApi from "../api/backendApi.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import SpaceCard from "../spaces/SpaceCard.js";
 import { Link, useParams } from "react-router-dom";
 
 // Shows a list of spaces that a user has either marked as visited or marked as liked. or both!

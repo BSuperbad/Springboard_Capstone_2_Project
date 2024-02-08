@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import SpaceCard from "../spaces/SpaceCard";
-import UserContext from "../context/UserContext";
-import useSpacesByCategory from "../hooks/useSpacesByCategory";
+import SpaceCard from "../spaces/SpaceCard.js";
+import UserContext from "../context/UserContext.js";
+import useSpacesByCategory from "../hooks/useSpacesByCategory.js";
 
 /** Spaces of Category page.
  *

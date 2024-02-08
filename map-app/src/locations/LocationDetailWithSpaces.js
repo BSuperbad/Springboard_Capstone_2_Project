@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import SpaceCard from "../spaces/SpaceCard";
-import UserContext from "../context/UserContext";
-import useSpacesByLocation from "../hooks/useSpacesByLocation";
+import SpaceCard from "../spaces/SpaceCard.js";
+import UserContext from "../context/UserContext.js";
+import useSpacesByLocation from "../hooks/useSpacesByLocation.js";
 
 /** Show page with list of spaces by location
  * 

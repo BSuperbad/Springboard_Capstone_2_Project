@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/UserContext";
+import UserContext from "../context/UserContext.js";
 
-import MapComponent from "../map/MapComponent";
+import MapComponent from "../map/MapComponent.js";
 
 const Home = () => {
     const {currentUser} = useContext(UserContext);

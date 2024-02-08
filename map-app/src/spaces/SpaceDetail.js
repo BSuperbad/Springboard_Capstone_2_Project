@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import LoadingSpinner from "../common/LoadingSpinner";
-import UserContext from "../context/UserContext";
-import useFetchAvgRating from "../hooks/useFetchAvgRating";
-import useFetchSpace from "../hooks/useFetchSpace";
-import useLikeSpace from "../hooks/useLikeSpace";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import UserContext from "../context/UserContext.js";
+import useFetchAvgRating from "../hooks/useFetchAvgRating.js";
+import useFetchSpace from "../hooks/useFetchSpace.js";
+import useLikeSpace from "../hooks/useLikeSpace.js";
 import './Spaces.css'
-import useMarkSpaceVisited from "../hooks/useMarkSpaceVisited";
+import useMarkSpaceVisited from "../hooks/useMarkSpaceVisited.js";
 
 /** Space Detail page.
  *

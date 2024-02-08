@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 
 const useSpacesByLocation = (city, neighborhood) => {
   const [spaces, setSpaces] = useState([]);

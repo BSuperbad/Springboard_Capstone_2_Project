@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import HappyHourApi from "../api/backendApi";
-import SpaceCard from "./SpaceCard";
-import LoadingSpinner from "../common/LoadingSpinner";
-import UserContext from "../context/UserContext";
+import HappyHourApi from "../api/backendApi.js";
+import SpaceCard from "./SpaceCard.js";
+import LoadingSpinner from "../common/LoadingSpinner.js";
+import UserContext from "../context/UserContext.js";
 import { Link } from "react-router-dom";
 
 /** Show page with list of spaces

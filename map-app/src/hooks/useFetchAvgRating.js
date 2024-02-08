@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 
 const useFetchAvgRating = (title) => {
   const [avgRating, setAvgRating] = useState(null);

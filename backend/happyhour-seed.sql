@@ -75,7 +75,8 @@ INSERT INTO locations (city, neighborhood) VALUES
   ('San Diego', 'Oceanside'),
   ('San Diego', 'Solana Beach'),
   ('San Francisco', 'Mission District'),
-  ('Santa Ana', 'Park & Paseo');
+  ('Santa Ana', 'Park & Paseo'),
+  ('Temecula', 'Temecula');
 
 -- Insert spaces
 INSERT INTO spaces (title, description, image_url, category_id, address, location_id, est_year) VALUES
@@ -86,7 +87,7 @@ INSERT INTO spaces (title, description, image_url, category_id, address, locatio
 ('Broadstone Archive', 'New apartment complex in Santa Ana with a secret karaoke room.', 'https://www.aoarchitects.com/wp-content/uploads/Archive_2880x1350_03-scaled.jpg', 8, '1901 E Dyer Rd, Santa Ana, CA, 92705', 42, 2021),
 ('Broken Spanish', 'Mexican and Southern California fusion restaurant that has since closed.', 'https://cdn.vox-cdn.com/thumbor/s5gT0TBA1peppWWMDtBzKg0yzl0=/2200x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3812956/2015-06-20-brokenspanish-001.0.jpg', 11, '1050 Flower St, Los Angeles, CA 90015', 7, 2015),
 ('Broken Spanish Pop-Up', 'Mexican and Southern California fusion residency at NeueHouse that has since closed.', 'https://ftcsfo3digitaloceanspaces.b-cdn.net/optimized/3X/0/8/08d8e1311dd3db8fc8f98492bbad5f5994210526_2_1332x1000.jpeg', 11, '6121 Sunset Blvd, Los Angeles, CA 90028', 10, 2021),
-('B.S. Taqueria', 'Mexican and Southern California casual fusion restaurant that has since closed.', 'https://cdn.vox-cdn.com/thumbor/6M-y-N2wkfwrifd9w7qmDTfZ82o=/2200x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3564368/2015-03-30-bstaqueria-008.0.jpg', 12, '514 W. 7th St, Los Angeles, CA 90014', 7, 2015),
+('B.S. Taqueria', 'Mexican and Southern California casual fusion restaurant that has since closed.', 'https://cdn.vox-cdn.com/thumbor/6M-y-N2wkfwrifd9w7qmDTfZ82o=/2200x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3564368/2015-03-30-bstaqueria-008.0.jpg', 11, '514 W. 7th St, Los Angeles, CA 90014', 7, 2015),
 ('Campfire', 'Bib Gourmand restaurant specializing in open fire cooking', 'https://afar.brightspotcdn.com/dims4/default/75def59/2147483647/strip/true/crop/728x500+36+0/resize/1320x906!/format/webp/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F98%2Fa4%2Fca2c31e5d731ac7021ed5af80c79%2Foriginal-efca2f636ac65ced2a5f48ac47417123.jpg', 1, '2725 State St, Carlsbad, CA, 92008', 23, 2016),
 ('Coffee Bean & Tea Leaf 3rd Street Promenade', 'Popular coffee chain that received a special redesign', 'https://s3-media0.fl.yelpcdn.com/bphoto/nfD9klSosC2N021f-H0moQ/o.jpg', 2, '1312 Third St Promenade, Santa Monica, California, 90401', 14, 2016),
 ('Enclave Cafe', 'Gorgeouse coffee shop that has since closed', 'https://s3-media0.fl.yelpcdn.com/bphoto/QwMlT4apJBVy6oPl4qpCsA/o.jpg', 11, '4655 Executive Dr San Diego, CA 92121', 33, 2012),
@@ -103,6 +104,7 @@ INSERT INTO spaces (title, description, image_url, category_id, address, locatio
 ('Juice Served Here Santa Monica', 'Juice bar chain that has since closed', 'https://images.squarespace-cdn.com/content/v1/536a9244e4b0f62696d24c22/1627624205324-5HRCR5RVSG7F7YZR7URK/JSH-Santa-Monica-4.jpg?format=2500w', 11, '1023 Montana Ave, Santa Monica, CA 90403', 14, 2012),
 ('Juice Served Here Silver Lake', 'Juice bar chain that has since closed', 'https://s3-media0.fl.yelpcdn.com/bphoto/w4niDY7_iRSq_SsFR5m8VQ/o.jpg', 11, '3827 Sunset Blvd, Los Angeles, CA 90026', 15, 2012),
 ('Juice Served Here Venice', 'Juice bar chain that has since closed', 'https://cdn.archilovers.com/projects/dd066110-bb01-4427-ac0e-513964955e81.jpg', 11, '609 S Lincoln Blvd, Venice, CA 90291', 16, 2012),
+('Leoness Cellars', 'Amazing Winery in Temecula', 'https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/temecula/1_F0E90FA8-5056-A36A-07E9F1602ED18447-f0e90ee85056a36_f0e911fe-5056-a36a-07d242cbcb2e58db.jpg', 14, '38311 De Portola Rd, Temecula, CA 92592', 43, 2017)
 ('Lola 55', 'Great tacos and even better margaritas.', 'https://media.cntraveler.com/photos/5e41bdd3a007f90008d5bade/16:9/w_1920,c_limit/Lola55-MExicanRestaurant-SanDiego-2020-1.jpg', 1, '1290 F St, San Diego, CA, 92101', 29, 2018),
 ('Marisi', 'Elevated maximalist Italian restaurant', 'https://cdn.vox-cdn.com/thumbor/AF-PeYlbqfC-XRuTigVSTyCFU0A=/0x0:5943x3962/1200x675/filters:focal(2497x1506:3447x2456)/cdn.vox-cdn.com/uploads/chorus_image/image/71309018/Marisi_Bar_PC_Kimberly_Motos.0.jpg', 1, '1044 Wall St, La Jolla, CA 92037', 33, 2023),
 ('Marrow Fine Chicago', 'Modern jewelry store with art deco flare', 'https://www.marrowfine.com/cdn/shop/files/marrow-fine-chicago-1.jpg?crop=center&v=1701717081&width=1500', 3, '9 West Walton St, Chicago, IL, 60610', 1, 2023),

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import HappyHourApi from "../api/backendApi";
-import UserContext from "../context/UserContext";
+import HappyHourApi from "../api/backendApi.js";
+import UserContext from "../context/UserContext.js";
 
 /** User Detail page.
  *

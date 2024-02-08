@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
-import HappyHourApi from '../api/backendApi';
+import HappyHourApi from '../api/backendApi.js';
 import { Link } from 'react-router-dom';
 
 const Map = () => {

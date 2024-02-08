@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HappyHourApi from "../api/backendApi";
+import HappyHourApi from "../api/backendApi.js";
 
 const useSpacesByCategory = (cat_type) => {
   const [spaces, setSpaces] = useState([]);
