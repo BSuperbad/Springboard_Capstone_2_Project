@@ -63,7 +63,8 @@ class Rating {
             spaces.title,
             spaces.description,
             users.username,
-            ratings.rating
+            ratings.rating,
+            ratings.rating_id
          FROM spaces
          JOIN ratings ON spaces.space_id = ratings.space_id
          JOIN users ON users.user_id = ratings.user_id
@@ -149,21 +150,21 @@ class Rating {
 
 
 
-  static async sortByAvgRating(sortOrder = 'ASC'){
-    const query = `
-    SELECT 
-    s.title,
-    AVG(r.rating) AS avg_rating
-    FROM 
-    spaces s
-    JOIN
-    ratings r ON s.space_id = r.space_id
-    GROUP BY s.title
-    ORDER BY avg_rating ${sortOrder}`;
+  // static async sortByAvgRating(sortOrder = 'ASC'){
+  //   const query = `
+  //   SELECT 
+  //   s.title,
+  //   AVG(r.rating) AS avg_rating
+  //   FROM 
+  //   spaces s
+  //   JOIN
+  //   ratings r ON s.space_id = r.space_id
+  //   GROUP BY s.title
+  //   ORDER BY avg_rating ${sortOrder}`;
 
-    const spacesRes = await db.query(query);
-    return spacesRes.rows;
-  }
+  //   const spacesRes = await db.query(query);
+  //   return spacesRes.rows;
+  // }
 
   /** Update rating data with `data`.
    *
@@ -184,7 +185,11 @@ class Rating {
        WHERE rating_id = $1`,
       [rating_id]
     );
-  
+
+    if (!user_id.rows[0]) {
+      throw new NotFoundError(`Rating with ID ${rating_id} not found.`);
+    }
+      
     if (!(user_id.rows[0].user_id === user.userId)) {
       throw new UnauthorizedError("Unauthorized to update this rating.");
     }

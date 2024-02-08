@@ -3,8 +3,6 @@
 const db = require("../db.js");
 const { BadRequestError, NotFoundError } = require("../expressError.js");
 
-// const { sqlForPartialUpdate } = require("../helpers/sql");
-
 /** Related functions for locations. */
 
 class Location {
@@ -129,6 +127,15 @@ class Location {
    */
 
   static async update({ loc_id, data }) {
+    const locationCheck = await db.query(
+      `SELECT loc_id FROM locations WHERE loc_id = $1`,
+      [loc_id]
+  );
+
+  if (locationCheck.rows.length === 0) {
+      // If location with loc_id doesn't exist, throw NotFoundError
+      throw new NotFoundError(`Location with id ${loc_id} not found.`);
+  }
     // in case the string is more than one word AND
     // To account for anyone entering lowercase, will always capitalize the first letter
     const capCity = data.city ? data.city.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : city;

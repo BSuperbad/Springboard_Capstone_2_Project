@@ -167,7 +167,7 @@ router.post("/:username/visit/:title", async function (req, res, next) {
   try {
     const loggedInUser = res.locals.user.username; 
     const space = req.params.title;
-    const vistedSpace = await User.markAsVisted(req.params.username, space, loggedInUser);
+    const vistedSpace = await User.markAsVisited(req.params.username, space, loggedInUser);
     return res.json({ visited: vistedSpace });
   } catch (err) {
     return next(err);

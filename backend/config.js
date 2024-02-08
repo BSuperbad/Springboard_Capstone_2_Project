@@ -17,9 +17,9 @@ function getDatabaseUri() {
 }
 
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
-const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === "test" ? 1 : 12;
+const BCRYPT_WORK_FACTOR = 12;
 
-console.log("Jobly Config:".green);
+console.log("Happy Hour Config:".green);
 console.log("SECRET_KEY:".yellow, SECRET_KEY);
 console.log("PORT:".yellow, PORT.toString());
 console.log("BCRYPT_WORK_FACTOR".yellow, BCRYPT_WORK_FACTOR);

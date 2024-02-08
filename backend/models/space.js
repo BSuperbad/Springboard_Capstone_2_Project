@@ -2,7 +2,6 @@
 
 const db = require("../db.js");
 const { BadRequestError, NotFoundError } = require("../expressError.js");
-// const Api = require("./dont-need-on-b-e/api.js")
 const { partialUpdate } = require("../helpers/partialUpdate");
 
 /** Related functions for spaces. */
@@ -262,7 +261,7 @@ class Space {
            WHERE title = $1
            RETURNING title`,
         [title]);
-    if (!space) throw new NotFoundError(`No space: ${title}`);
+    if (space.rows.length===0) throw new NotFoundError(`No space: ${title}`);
     return space.rows[0];
 
   }

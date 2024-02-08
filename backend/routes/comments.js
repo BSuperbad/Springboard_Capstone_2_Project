@@ -110,6 +110,7 @@ router.get("/:comment_id", ensureLoggedIn, async function (req, res, next) {
 router.patch("/:comment_id/edit", ensureLoggedIn, async function (req, res, next) {
   try {
     const user = res.locals.user;
+    console.log(user)
     const updateComment = await Comment.updateComment(req.params.comment_id, user, req.body.comment);
     return res.json({ updated: updateComment });
   } catch (err) {
@@ -124,7 +125,8 @@ router.patch("/:comment_id/edit", ensureLoggedIn, async function (req, res, next
 
 router.delete('/:comment_id', ensureLoggedIn, async function (req, res, next) {
     try {
-      const userId = res.locals.user.userId;
+      const userId = res.locals.user.user_id;
+      console.log("res.locals.user", res.locals.user)
       const isAdmin = res.locals.user.isAdmin;
       const deleted = await Comment.delete(req.params.comment_id, userId, isAdmin);
       return res.json({ deleted });

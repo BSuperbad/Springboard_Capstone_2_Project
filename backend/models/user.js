@@ -161,7 +161,7 @@ class User {
    */
 
   static async update(username, loggedInUser, data) {
-    if(!(username === loggedInUser.username || isAdmin)){
+    if(!(username === loggedInUser.username || loggedInUser.isAdmin)){
       throw new UnauthorizedError('Must be admin or logged-in user to access.')
     }
     if (data.password) {
@@ -207,6 +207,7 @@ class User {
     const user = result.rows[0];
 
     if (!user) throw new NotFoundError(`No user: ${username}`);
+    return user;
   }
 
   /** Like a space: adds user_id  and space_id to like table in db,
@@ -347,7 +348,7 @@ WHERE l.user_id = $1`,
    * Returns NotFoundErrors if username or title are not found.
    **/
 
-  static async markAsVisted(username, spaceTitle, loggedInUser) {
+  static async markAsVisited(username, spaceTitle, loggedInUser) {
     if(username !== loggedInUser){
       throw new UnauthorizedError(`Cannot mark a space as 'visited' for another user`)
     }

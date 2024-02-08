@@ -98,18 +98,18 @@ router.get("/:rating_id", async function (req, res, next) {
  *
  * Authorization required: none
  */
-router.get("/:sortOrder", async function (req, res, next) {
+// router.get("/:sortOrder", async function (req, res, next) {
 
-  try {
+//   try {
 
-    const order = req.params.sortOrder;
-    const sorted = await Rating.sortByAvgRating(order);
-    return res.json({ sorted });
-  } catch (err) {
-    return next(err);
-  }
+//     const order = req.params.sortOrder;
+//     const sorted = await Rating.sortByAvgRating(order);
+//     return res.json({ sorted });
+//   } catch (err) {
+//     return next(err);
+//   }
   
-});
+// });
 
 /** PATCH /[rating] { newRating } => { rating }
  *

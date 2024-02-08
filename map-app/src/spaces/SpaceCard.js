@@ -23,7 +23,6 @@ const SpaceCard = ({ title, description, category, address, est_year, city, neig
   const {visited, visitDate, handleVisitClick} = useMarkSpaceVisited(currentUser, title);
 
   if (!currentUser) {
-    // If currentUser is not available, you can choose to render a loading state or handle it accordingly
     return <p>Loading...</p>;
   }
   return (

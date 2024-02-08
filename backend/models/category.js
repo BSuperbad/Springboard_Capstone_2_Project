@@ -3,8 +3,6 @@
 const db = require("../db.js");
 const { BadRequestError, NotFoundError } = require("../expressError.js");
 
-// const { sqlForPartialUpdate } = require("../helpers/sql");
-
 /** Related functions for locations. */
 
 class Category {
@@ -174,7 +172,6 @@ class Category {
            WHERE cat_type = $1
            RETURNING cat_type`,
         [catType]);
-        console.log(deletedCat)
 
         return `Category '${catType}' successfully deleted.`;
     } catch (error) {

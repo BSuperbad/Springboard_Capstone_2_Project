@@ -1,7 +1,6 @@
 "use strict";
 
 const db = require("../db.js");
-// const { sqlForPartialUpdate } = require("../helpers/sql");
 const {
   NotFoundError,
   UnauthorizedError,
@@ -56,6 +55,7 @@ class Comment {
             spaces.description,
             comments.comment,
             comments.comment_date,
+            comments.comment_id,
             users.username 
          FROM spaces
          JOIN comments ON spaces.space_id = comments.space_id
@@ -136,7 +136,7 @@ class Comment {
 
       static async getComment(comment_id) {
         const commentData = await db.query(
-          `SELECT comments.comment, comments.comment_date, users.username, spaces.title
+          `SELECT comments.comment_id, comments.comment, comments.comment_date, users.username, spaces.title
            FROM comments
            JOIN users ON comments.user_id = users.user_id
            JOIN spaces ON comments.space_id = spaces.space_id
@@ -176,9 +176,10 @@ class Comment {
     }
   
     const commentUserId = commentRes.rows[0].user_id;
+
   
     // Check if the user is authorized to update the comment
-    if (!(commentUserId === user.user_id || user.isAdmin)) {
+    if (commentUserId !== user.userId) {
       throw new UnauthorizedError("Unauthorized to update this comment.");
     }
     const updatedCommentedSpace = await db.query(
@@ -213,6 +214,8 @@ class Comment {
     );
     if(!result.rows[0]) throw new NotFoundError(`Comment not found`);
     const commentUserId = result.rows[0].user_id;
+    console.log(commentUserId)
+    console.log(userId)
     if(!(commentUserId === userId || isAdmin)){
       throw new UnauthorizedError("Unauthorized to delete this comment.");
     }
