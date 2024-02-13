@@ -3,7 +3,7 @@ import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import HappyHourApi from '../api/backendApi.js';
 import { Link } from 'react-router-dom';
 
-const Map = () => {
+const MapComponent = () => {
   const [spaceLocations, setSpaceLocations] = useState([]);
   const [clickedSpace, setClickedSpace] = useState(null);
 
@@ -90,4 +90,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default MapComponent;

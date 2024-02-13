@@ -4,7 +4,7 @@ import NavBar from './navigation/NavBar.js';
 import UserContext from './context/UserContext.js';
 import React, {useState, useEffect} from 'react';
 import HappyHourApi from './api/backendApi.js';
-import {jwtDecode} from "jwt-decode"
+import jwtDecode from "jwt-decode"
 import MyRoutes from './navigation/MyRoutes.js';
 
 
@@ -47,19 +47,39 @@ function App() {
   }, [token, setCurrentUser]);
   
 
+  // const signup = async (userData) => {
+  //   try {
+  //     let newToken = await HappyHourApi.register(userData);
+  //     setToken(newToken.token);
+  //     localStorage.setItem('token', newToken.token);
+  //     HappyHourApi.token = newToken.token;
+  //     const decodedToken = jwtDecode(newToken.token);
+  //     const loggedInUser = await HappyHourApi.getCurrentUser(decodedToken.username);
+  //     setCurrentUser(loggedInUser);
+  //   } catch(e) {
+  //     console.error('Signup failed', e);
+  //   }
+  // };
+
   const signup = async (userData) => {
     try {
-      let newToken = await HappyHourApi.register(userData);
-      setToken(newToken.token);
-      localStorage.setItem('token', newToken.token);
-      HappyHourApi.token = newToken.token;
-      const decodedToken = jwtDecode(newToken.token);
-      const loggedInUser = await HappyHourApi.getCurrentUser(decodedToken.username);
-      setCurrentUser(loggedInUser);
-    } catch(e) {
-      console.error('Signup failed', e);
+      const newUser = await HappyHourApi.register(userData);
+      // Assuming newUser contains user information, but not the token
+      // You may need to adjust this based on the actual response from register
+      const userToken = await HappyHourApi.authenticate(userData.username, userData.password);
+      setToken(userToken.token);
+      console.log(userToken.token)
+      console.log(newUser)
+      localStorage.setItem('token', userToken.token);
+      HappyHourApi.token = userToken.token;
+      setCurrentUser(newUser);
+      console.log(currentUser)
+    } catch(error) {
+      console.error('Signup failed', error);
+      // Handle the error here (e.g., display an error message to the user)
     }
   };
+  
 
   const create = async (type, identifier = null, data) => {
     try {

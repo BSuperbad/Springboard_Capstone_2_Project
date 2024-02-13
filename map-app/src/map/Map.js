@@ -44,8 +44,8 @@ const Map = () => {
   }, [title]);
 
   const mapStyles = {
-    height: '400px',
     width: '100%',
+    height: '60vh'
   };
 
   const handleMarkerClick = (space) => {
@@ -87,7 +87,6 @@ const Map = () => {
                   <Link to={`/spaces/${clickedSpace.title}`}>
                     <h5>{clickedSpace.title}</h5>
                   </Link>
-                  {/* You can add additional information about the clicked space if needed */}
                 </div>
               </InfoWindow>
             )}

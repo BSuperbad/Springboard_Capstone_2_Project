@@ -26,7 +26,7 @@ import RatingForm from '../forms/RatingForm.js';
 import RatingAvg from '../ratings/RatingsAvg.js';
 import RatingEdit from '../ratings/RatingEdit.js';
 import UserSpacesList from '../users/UserSpacesList.js';
-import Map from '../map/Map.js';
+import Map from '../map/Map.js'
 
 const MyRoutes = ({login, signup, remove, update, create})=>{
 

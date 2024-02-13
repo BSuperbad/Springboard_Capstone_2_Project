@@ -5,12 +5,12 @@ import UserContext from "../context/UserContext.js";
 const NavBar = ({ logout }) => {
   const { currentUser } = useContext(UserContext);
 
-  const navBarStyle = { backgroundColor: '#f8ad9d' }; // Add your desired navbar background color
+  const navBarStyle = { backgroundColor: '#f8ad9d' };
   const linkStyle = { color: "white" };
 
   const loggedInNav = () => {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={navBarStyle}>
+      <nav className="navbar navbar-expand navbar-light" style={navBarStyle}>
         <div className="container d-flex flex-column align-items-center">
         <div className="mx-auto navbar-brand">
             <Link to="/" style={{ ...linkStyle, textDecoration: "none" }}>
@@ -75,7 +75,7 @@ const NavBar = ({ logout }) => {
 
   const anonNav = () => {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={navBarStyle}>
+      <nav className="navbar navbar-expand navbar-light" style={navBarStyle}>
         <div className="container d-flex flex-column align-items-center">
         <div className="mx-auto navbar-brand">
             <Link to="/"style={{ ...linkStyle, textDecoration: "none" }}>
